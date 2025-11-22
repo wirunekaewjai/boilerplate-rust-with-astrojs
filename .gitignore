@@ -1,0 +1,24 @@
+# directory
+.astro/
+.bundle/
+.cache/
+.idea/
+.litestream/
+.locals/
+.rolldown/
+.temp/
+bundle/
+dist/
+node_modules/
+target/
+
+# file
+.DS_Store
+.env
+.env.production
+.eslintcache
+*.tsbuildinfo
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*

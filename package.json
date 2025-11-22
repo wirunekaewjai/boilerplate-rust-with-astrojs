@@ -1,0 +1,13 @@
+{
+  "name": "boilerplate",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "build:fe": "cd packages/frontend && bun run build",
+    "dev:be": "cargo watch -x 'run --features dev' -i 'packages/frontend/**/*'",
+    "dev:fe": "cd packages/frontend && bun run dev",
+    "dev": "bun run dev:fe & bun run dev:be",
+    "preview:be": "cargo run",
+    "preview": "bun run build:fe && bun run preview:be"
+  }
+}

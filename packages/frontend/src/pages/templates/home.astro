@@ -1,0 +1,23 @@
+---
+import ListItem from "@/views/list-item.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Rust + Astro</title>
+  </head>
+  <body>
+    <h1>This is demo page</h1>
+    <ul>
+      <Fragment set:html="{% for product in products %}" />
+      <ListItem>
+        <Fragment slot="name" set:html="{{ product.name }}" />
+        <Fragment slot="price" set:html="{{ product.price }} ฿" />
+      </ListItem>
+      <Fragment set:html="{% endfor %}" />
+    </ul>
+  </body>
+</html>
